@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var lr=prompt("Enter an lower range");
+    var ur=prompt("Enter an upper range");
+    var c=confirm("Do u want to see the table")
+    var square=0;
+    var cube=0;
+    var myTable="<h1 style='text-align: center'>Program to find the square and the cube</h1>"
+     myTable+="<table border='1' align='center' width='35%'> <tr><th>No</th><th>Square</th><th>Cube</th></tr>"
+    for(var i=parseInt(lr);i<=parseInt(ur);i++){
+        square=i*i;
+        cube=i*i*i;
+        myTable+="<tr><td>"+i+"</td><td>"+square+"</td><td>"+cube+"</td></tr>"
+    }
+    myTable+="</table>";
+    if(c){
+        document.write(myTable);
+    }
+
+</script>
+</body>
+</html>
