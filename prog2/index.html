@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        button{
+            width: 100%;
+        }
+        .row1{
+            background: darkgrey;
+        }
+        .col1{
+            background: dimgray;
+        }
+    </style>
+    <script>
+        function insert(val){
+            document.getElementById('text').value+=val;
+        }
+        function reset(val){
+            document.getElementById('text').value="";
+        }
+        function square(){
+            var res=eval(document.getElementById('text').value)
+            document.getElementById('text').value=res*res;
+        }
+        function sqrt(){
+            var res=eval(document.getElementById('text').value)
+            document.getElementById('text').value=res**0.5;
+        }
+        function calc(){
+            var res=eval(document.getElementById('text').value)
+            document.getElementById('text').value=res;
+        }
+    </script>
+
+</head>
+<body>
+    <h1>Simple Calculator</h1>
+    <table align="center" border="1">
+        <tr >
+            <td colspan="5">
+                <input type="text" value="" id="text">
+            </td>
+        </tr>
+        <tr>
+            <td><button class="row1" onclick="insert('7')">7</button></td>
+            <td><button class="row1" onclick="insert('8')">8</button></td>
+            <td><button class="row1" onclick="insert('9')">9</button></td>
+            <td><button class="row1" onclick="insert('*')">*</button></td>
+            <td><button class="row1" onclick="insert('/')">/</button></td>
+        </tr>
+        <tr>
+            <td><button class="row1" onclick="insert('4')">4</button></td>
+            <td><button class="col1" onclick="insert('5')">5</button></td>
+            <td><button class="col1" onclick="insert('6')">6</button></td>
+            <td><button class="col1" onclick="insert('+')">+</button></td>
+            <td><button class="row1" onclick="insert('-')">-</button></td>
+        </tr>
+        <tr>
+            <td><button class="row1" onclick="insert('1')">1</button></td>
+            <td><button class="col1" onclick="insert('2')">2</button></td>
+            <td><button class="col1" onclick="insert('3')">3</button></td>
+            <td><button class="col1" onclick="insert('0')">0</button></td>
+            <td><button class="row1" onclick="calc()">=</button></td>
+        </tr>
+
+        <tr>
+            <td colspan="5">
+                <button class="row1" onclick="square()">Square</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <button class="row1" onclick="sqrt()">Square root</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <button class="row1" onclick="reset()">Clear</button>
+            </td>
+
+        </tr>
+
+    </table>
+</body>
+</html>
